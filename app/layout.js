@@ -8,14 +8,14 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Mailmuse",
+  title: "SmartDraft",
   description: "AI-based mail template generator",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={outfit.variable}>{children}</body>
+    <html lang="en" >
+      <body className={outfit.variable }>{children}</body>
     </html>
   );
 }
