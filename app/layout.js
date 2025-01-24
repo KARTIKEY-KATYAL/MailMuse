@@ -1,21 +1,31 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Provider from "./provider";
 
 const outfit = Outfit({
-  subsets: ["latin"], // Specify the subsets you need, e.g., "latin"
-  variable: "--font-outfit", // Optional: for using CSS variables
-  weight: ["400", "500", "700"], // Add the desired font weights
+  subsets: ["latin"], // Specifies the required subsets
+  variable: "--font-outfit", // CSS variable for custom styling
+  weight: ["400", "500", "700"], // Font weights for flexibility
 });
 
 export const metadata = {
   title: "SmartDraft",
-  description: "AI-based mail template generator",
+  description: "AI-based email template generator",
 };
 
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="en" >
-      <body className={outfit.variable }>{children}</body>
+    <html lang="en">
+      <head />
+      <body className={`${outfit.variable} bg-gray-50 text-gray-900`}>
+        {/* Wrapping children with the Provider */}
+        
+        <Provider>{children}</Provider>
+        
+      </body>
     </html>
   );
 }
+
+

@@ -2,7 +2,7 @@ import { Columns, Columns2, Columns3, Columns4, RectangleHorizontal } from "luci
 
 export default [
     {
-        label: 'Column',
+        label: '1 Column',
         type: 'column',
         numOfCol: 1,
         icon: RectangleHorizontal

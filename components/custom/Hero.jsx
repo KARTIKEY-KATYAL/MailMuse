@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import SignInButtonComponent from "./SignInButtonComponent";
 
 function Hero() {
   return (
@@ -22,9 +24,9 @@ function Hero() {
           <button className="px-6 py-3 bg-yellow-300 text-red-600 font-bold hover:text-white transition-all hover:bg-green-600 text-lg rounded-full hover:scale-110 shadow-md duration-300">
             Try Demo
           </button>
-          <button className="px-6 py-3 hover:bg-orange-600 hover:text-red-50 font-bold text-white transition-all bg-slate-500 text-lg rounded-full hover:scale-110 shadow-md duration-300">
-            Get Started
-          </button>
+          <div className="px-6 py-3 hover:bg-orange-600 hover:text-red-50 text-white transition-all bg-slate-500 text-xl font-bold rounded-full hover:scale-110 shadow-md duration-300 cursor-pointer">
+            <SignInButtonComponent />
+          </div>
         </div>
       </section>
 
